@@ -1,0 +1,18 @@
+# Site settings
+title: kitt.github.io
+# email: hi@kh47.com
+description: > # this means to ignore newlines until "baseurl:"
+  Right.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://kitt.github.io" # the base hostname & protocol for your site
+twitter_username: kitt
+github_username:  kitt
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock

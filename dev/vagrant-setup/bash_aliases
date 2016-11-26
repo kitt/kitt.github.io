@@ -1,0 +1,21 @@
+alias d="dirs -v"
+alias pu='pushd $!'
+alias po='popd'
+alias sa='source ~/.bash_aliases; echo "~/.bash_aliases reloaded"'
+alias mroe=more
+alias wpd=pwd
+alias purge='rm *~'
+function psg(){
+  ps -ef | grep $1
+}
+function hg(){
+  history | grep $1
+}
+# git stuff
+alias gti=git
+alias unfuck='git reset --soft "HEAD^"'
+
+# ruby love
+alias be='bundle exec'
+alias bi='bundle install'
+alias bc='bundle check'

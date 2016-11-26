@@ -1,0 +1,11 @@
+
+
+==================================================================
+
+YAY!
+
+To start the local development server, use dev/start-jekyll.sh
+
+Then go to http://localhost:4000/
+
+

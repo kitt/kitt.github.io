@@ -1,0 +1,19 @@
+[alias]
+        ci = commit
+        st = status
+        s  = status
+        t  = status
+        ic = commit
+        pom = push origin master
+        co = checkout
+        log = log --topo-order --first-parent --graph --decorate
+        refresh = !bash -c "current_branch=`git name-rev --name-only head`; if [[ 'xx' != 'x${current_branch}x' ]]; then git checkout master; git pull; git checkout ${current_branch}; git merge --no-ff master; fi"
+        tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[apply]
+        whitespace = nowarn
+[color]
+        ui=auto
+[global]
+        ui = true
+[merge]
+	conflictstyle = diff3
