@@ -11,11 +11,11 @@ apt-get -y install curl git >/dev/null 2>&1
 echo "...done."
 
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-apt-get install -y build-essential nodejs
+apt-get install -y build-essential nodejs python
 
 echo "Setting up user configuration..."
-su -c "refresh/dev/vagrant-provision-as-user.sh" vagrant
+su -c "refresh/dev/vagrant-provision-as-user.sh" ubuntu
 
 echo "Done"
-cat ~vagrant/refresh/dev/vagrant-setup/first-run.txt
+cat ~ubuntu/refresh/dev/vagrant-setup/first-run.txt
 

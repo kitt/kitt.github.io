@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Installing a bunch of stuff as the vagrant user (easier than sudo -u vagrant on each line)
+# Installing a bunch of stuff as the vagrant user (easier than sudo -u ubuntu on each line)
 
 echo "Install ruby..."
 
@@ -11,7 +11,7 @@ curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # source this for this run, normally not needed
-source /home/vagrant/.rvm/scripts/rvm
+source ~/.rvm/scripts/rvm
 
 # default
 rvm install "$(cat refresh/.ruby-version)"
@@ -37,14 +37,14 @@ echo "...done."
 echo "Setting up things..."
 
 # set VAGRANT=true to enable scripts to detect whether they run on Vagrant VM
-echo "export VAGRANT=true" >> /home/vagrant/.bash_profile
+echo "export VAGRANT=true" >> ~/.bash_profile
 # set localization to en_US.UTF-8 to avoid character encoding errors in Liquid
-echo "export LC_ALL=en_US.UTF-8" >> /home/vagrant/.bash_profile
+echo "export LC_ALL=en_US.UTF-8" >> ~/.bash_profile
 
-echo "gem: --no-ri --no-rdoc" >> /home/vagrant/.gemrc
+echo "gem: --no-ri --no-rdoc" >> ~/.gemrc
 
 # cd to /refresh when logging in via "vagrant ssh"
-echo "cd ~/refresh" >> /home/vagrant/.bash_profile
+echo "cd ~/refresh" >> ~/.bash_profile
 
 # set up vagrant login customizations
 cp ~/refresh/dev/vagrant-setup/gitconfig ~/.gitconfig
