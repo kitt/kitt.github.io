@@ -4,5 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Yeah, this page doesn't really tell you anything.  Not yet, anyway.
+@kitt's GitHub Pages site, where she tests things out for other people's projects.
+
+### exciting!
+
+
 
